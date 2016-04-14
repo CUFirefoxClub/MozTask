@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mozilla Chandigarh</title>
+	<meta name="viewport" content="width=device-width, intial-scale=1">
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+<header id="headWrapper">
+	
+		<img src="images/header.jpg" type="image/jpeg" class="shdw-6 logo" alt="logo">
+		<!-- Mobile Menu -->
+			<img src="images/images.png" href="#" id="menubtn">
+			<div class="clear"></div>
+		<div id="m-menu">
+		
+		<ul  class="shdw-6" >
+			<li><a href="#Home">Home</a></li>
+			<li><a href="#Leaders">Leaders</a></li>
+			<li class="d"><a  href="#Events">Events</a><a id="drpbtn" style="padding: 10px" >></a>
+			<div id="drpdwn">
+			<ul>
+			  	<li><a href="" >Event 1</a></li>
+			  	<li><a href="" >Event 2</a></li>
+			  	<li><a href="" >Event 3</a></li>
+			  	</ul>
+			  </div>
+			</li>
+			<li><a href="#Members" >Members</a></li>
+			<li><a href="#Gallery" >Gallery</a></li>
+		</ul>
+		</div>
+		<!-- Pc Menu -->
+		<div id="pc-menu">
+		<ul class="shdw-6" >
+			
+			<li><a href="#Home">Home</a></li>
+			<li><a href="#Leaders">Leaders</a></li>
+			<li class="dropdown">
+			<a href="#Events" class="dropbtn">Events</a>
+			<div class="dropdown-content">
+			  	<a href="" >Event 1</a>
+			  	<a href="" >Event 2</a>
+			  	<a href="" >Event 3</a>
+			  </div>
+			</li>
+			<li><a href="#Members" >Members</a></li>
+			<li><a href="#Gallery" >Gallery</a></li>
+		</ul>
+	</div>
+
+	
+</header>
+
+<section id="Home" id="#Home">
+	<div class="container clear" >
+	<h1>Welcome</h1>
+		 
+	<p>
+Ready to dive into the world of Open web, where you are free and independent of your surf ! CU Firefox Club is where everyone is like you ! Crazy about surfing the Open Web !</p>
+	</div>
+</section>
+<section id="Leaders" id="#Leaders">
+	
+</section>
+<section id="Events" id="#Events">
+	
+</section>
+<section id="Members" id="#Members">
+	
+</section>
+<section id="Gallery" id="#Gallery">
+	
+</section>
+
+
+	<script src="Scripts/jquery-1.12.2.min.js"></script>
+
+<!-- Back to Top -->
+
+<script type="text/javascript">
+// create the back to top button
+$('body').prepend('<a href="#" class="back-to-top">Back to Top</a>');
+
+var amountScrolled = 300;
+
+$(window).scroll(function() {
+	if ( $(window).scrollTop() > amountScrolled ) {
+		$('a.back-to-top').fadeIn('slow');
+	} else {
+		$('a.back-to-top').fadeOut('slow');
+	}
+});
+
+$('a.back-to-top, a.simple-back-to-top').click(function() {
+	$('html, body').animate({
+		scrollTop: 0
+	}, 1000);
+	return false;
+});
+</script>
+
+
+
+
+
+<!-- Smooth Scroll -->
+
+	<script>
+  $(function() {
+    $('a[href*="#"]:not([href="#"])').click(function() {
+      if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+        var target = $(this.hash);
+        target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+        if (target.length) {
+          $('html, body').animate({
+            scrollTop: target.offset().top
+          }, 1000);
+          return false;
+        }
+      }
+    });
+  });
+	</script>
+
+
+<!-- Menu Bar mobile -->
+<script>
+var mDrp = document.getElementById("drpbtn");
+var drpCt = document.getElementById("drpdwn");
+var menu = document.getElementById("menubtn");
+var menu1 = document.getElementById("m-menu");
+
+mDrp.onclick = function(){
+
+	if (drpCt.className == "open") {
+
+		drpCt.className = "";
+		
+	}
+	else{
+		drpCt.className = "open";
+	}
+};
+
+menu.onclick = function(){
+
+	if (menu1.className == "o") {
+		menu1.className = "";
+		drpCt.className = "";
+	}
+	else
+	{
+		menu1.className = "o";
+	}
+};
+
+</script>
+
+
+</body>
+</html>
